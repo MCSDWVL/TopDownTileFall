@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top Down Tetris</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header>
+        <p class="eyebrow">THE WORST POSSIBLE CAMERA ANGLE</p>
+        <h1>TOP DOWN<br /><span>TETRIS</span></h1>
+        <p class="tagline">Tetris, viewed from the ceiling. Good luck.</p>
+      </header>
+
+      <section class="game-layout" aria-label="Top Down Tetris game">
+        <aside class="left-panel">
+          <div class="score-card">
+            <span>SCORE</span>
+            <strong id="score">000000</strong>
+            <small id="lines">0 lines cleared</small>
+          </div>
+          <div class="current-card">
+            <span>CURRENT</span>
+            <canvas id="current" width="180" height="130" aria-label="Current piece preview"></canvas>
+            <small>HEIGHT <strong id="height">0</strong></small>
+          </div>
+          <div class="help-card">
+            <p>CONTROLS</p>
+            <div><kbd>←</kbd><kbd>→</kbd><span>scoot</span></div>
+            <div><kbd>↑</kbd><span>spin it</span></div>
+            <div><kbd>↓</kbd><span>panic drop</span></div>
+            <div><kbd>space</kbd><span>full send</span></div>
+          </div>
+        </aside>
+
+        <div class="board-wrap">
+          <div id="camera-label" class="camera-label"><i></i> LIVE CEILING CAM</div>
+          <div class="reality-countdown">
+            <span id="reality-check-label">REALITY CHECK IN</span>
+            <strong id="reality-countdown">08</strong>
+          </div>
+          <canvas id="board" width="500" height="1000" aria-label="Top down Tetris board"></canvas>
+          <div class="board-glare"></div>
+          <div id="celebration" class="celebration" aria-live="polite"></div>
+          <div id="game-over" class="game-over hidden">
+            <p>THE CEILING WON</p>
+            <strong>GAME OVER</strong>
+            <button id="restart">TRY A BETTER ANGLE</button>
+          </div>
+        </div>
+
+        <aside class="right-panel">
+          <div class="next-card">
+            <span>NEXT</span>
+            <canvas id="next" width="180" height="130"></canvas>
+          </div>
+        </aside>
+      </section>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
