@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Top Down Tetris</title>
+    <title>Top Down Tile Fall</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -13,11 +13,11 @@
     <main class="game-shell">
       <header>
         <p class="eyebrow">THE WORST POSSIBLE CAMERA ANGLE</p>
-        <h1>TOP DOWN<br /><span>TETRIS</span></h1>
-        <p class="tagline">Tetris, viewed from the ceiling. Good luck.</p>
+        <h1>TOP DOWN<br /><span>TILE FALL</span></h1>
+        <p class="tagline">Tiles, viewed from the ceiling. Good luck.</p>
       </header>
 
-      <section class="game-layout" aria-label="Top Down Tetris game">
+      <section class="game-layout" aria-label="Top Down Tile Fall game">
         <aside class="left-panel">
           <div class="score-card">
             <span>SCORE</span>
@@ -44,7 +44,7 @@
             <span id="reality-check-label">REALITY CHECK IN</span>
             <strong id="reality-countdown">08</strong>
           </div>
-          <canvas id="board" width="500" height="1000" aria-label="Top down Tetris board"></canvas>
+          <canvas id="board" width="500" height="1000" aria-label="Top down tile board"></canvas>
           <div class="board-glare"></div>
           <div id="celebration" class="celebration" aria-live="polite"></div>
           <div id="game-over" class="game-over hidden">
